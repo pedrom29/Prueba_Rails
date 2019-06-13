@@ -1,0 +1,30 @@
+<div class="card">
+
+
+  <h1>Descripción</h1>
+  <table class="table">
+    <thead>
+      <tr>
+      <th>Descripción</th>
+      <th>Completado</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th colspan="4"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @todos.each do |todo| %>
+    <tr>
+      <td><%= todo.description %></td>
+      <td><%= todo.completed %></td>
+      <td><%= link_to 'Show', todo_path(todo) %></td>
+      <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
+    </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+<%= link_to 'Crear ToDo', new_todo_path %>

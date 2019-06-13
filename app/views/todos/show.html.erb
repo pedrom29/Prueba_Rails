@@ -1,0 +1,26 @@
+<div class="card">
+
+
+  <h1>Descripción</h1>
+  <table class="table">
+    <thead>
+      <tr>
+      <th>Descripción</th>
+      <th>Completado</th>
+      <th colspan="2"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+    <tr>
+      <td><%= @todo.description %></td>
+      <td><%= @todo.completed %></td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+<%= link_to 'Crear ToDo', new_todo_path %>
