@@ -9,7 +9,9 @@
       <th>Completado</th>
       <th>Show</th>
       <th>Edit</th>
-      <th colspan="4"></th>
+      <th>Destroy</th>
+      <th> </th>
+      <th colspan="5"></th>
       </tr>
     </thead>
 
@@ -20,6 +22,8 @@
       <td><%= todo.completed %></td>
       <td><%= link_to 'Show', todo_path(todo) %></td>
       <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
+      <td><%= link_to 'Destroy', todo, method: :delete %></td>
+      <td><%= link_to 'Completed'  %></td>
     </tr>
       <% end %>
     </tbody>
